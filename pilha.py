@@ -37,13 +37,3 @@ class Pilha:
             cont+=1
             topo=topo.get_proximo()
         return cont
-    def printall(self):
-        p=self._head
-        q=p
-        while(q.get_proximo()!=None):
-            q=q.get_proximo()
-        while(q!=p):
-            print(q)
-x= Pilha(1)
-x.push(7)
-x.push(2)
