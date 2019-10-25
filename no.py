@@ -11,11 +11,6 @@ class No:
         return self._proximo
     def set_proximo(self,outro):
         self._proximo=outro
-    def add(self,no):
-        p=get_dado()
-        while(p.get_proximo()==None):
-            p.get_proximo()=no
-            no.get_proximo()=None
     def __str__(self):
         return "{}".format(self._dado)
     
