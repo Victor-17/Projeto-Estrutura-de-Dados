@@ -20,7 +20,7 @@ class Fila:
             cont += 1
             p = p.get_proximo()
         cont += 1
-        return f'O tamanho da fila é de  itens..'
+        return f'O tamanho da fila é de {cont}  itens..'
     def printall(self):
           p = self._head
           print(p,"\n")
