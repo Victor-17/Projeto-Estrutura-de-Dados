@@ -144,11 +144,11 @@ class Lista:
             print(p,"\n")
             p=p.get_proximo()
 
-
-
-dado = Dado('JGDGS','Jsifu','Trush')
-no = No(dado)
-fila = Fila(no)
-print(fila.printall())
-dado2 = Dado('Boom','Matuê','Rap')
-no2 = No(dado2)
+dado=Dado('Avião','Orochi','RAP')
+dado1=Dado('Balão','Orochi','TRAP')
+dado2=Dado('Tareco','Flávio','Forró')
+no=No(dado)
+pilha=Pilha(no)
+pilha.push(dado1)
+pilha.push(dado2)
+print(pilha.printall())
