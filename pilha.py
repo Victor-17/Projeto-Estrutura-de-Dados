@@ -7,21 +7,19 @@ class Pilha:
         else:
             return False
     def push(self,item):
-        p=self._head
-        q=No(item)
-        q.set_proximo(p)
-        q=self._head
+        p = item
+        p.set_proximo(self._head)
+        self._head=p
     def remove(self):
-        p=self._head
-        topo=self._head
-        topo.set_proximo(self._head)
-        p.set_proximo(None)
+        p = self._head
+        self._head = p.get_proximo()
     def size(self):
         topo=self._head
         cont=0
         while(topo.get_proximo()!=None):
             cont+=1
             topo=topo.get_proximo()
+        cont+=1
         return cont
     def printall(self):
         p = self._head

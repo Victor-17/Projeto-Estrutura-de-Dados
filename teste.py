@@ -42,6 +42,31 @@ class Fila:
             p = p.get_proximo()
         cont += 1
         return f'O tamanho da fila é de {cont}  itens..'
+    def ordenar(self):
+        p = self._head
+        temp = 0
+        cont = 0
+        while(p.get_proximo() != None):
+            cont += 1
+            p = p.get_proximo()
+        cont += 1
+        print('A lista ordenada é:\n')
+        while(temp < cont):
+            while(p.get_proximo() != None):
+                if(p.get_dado()._musica > p.get_proximo().get_dado()._musica):
+                    aux = p.get_dado()._musica
+                    p.get_dado()._musica = p.get_proximo().get_dado()._musica
+                    p.get_proximo().get_dado()._musica = aux
+                    if temp == cont-1:
+                        print(p.get_dado()._musica)
+                else:
+                    if temp == cont-1:
+                        print(p.get_dado()._musica)
+                    p = p.get_proximo()
+        if temp == cont-1:
+            print(p.get_dado()._musica)
+        p = self._head
+        temp +=1
     def printall(self):
           p = self._head
           print(p,"\n")
@@ -57,21 +82,19 @@ class Pilha:
         else:
             return False
     def push(self,item):
-        p=self._head
-        q=No(item)
-        q.set_proximo(p)
-        q=self._head
+        p = item
+        p.set_proximo(self._head)
+        self._head=p
     def remove(self):
-        p=self._head
-        topo=self._head
-        topo.set_proximo(self._head)
-        p.set_proximo(None)
+        p = self._head
+        self._head = p.get_proximo()
     def size(self):
         topo=self._head
         cont=0
         while(topo.get_proximo()!=None):
             cont+=1
             topo=topo.get_proximo()
+        cont+=1
         return cont
     def printall(self):
         p = self._head
@@ -148,7 +171,5 @@ dado=Dado('Avião','Orochi','RAP')
 dado1=Dado('Balão','Orochi','TRAP')
 dado2=Dado('Tareco','Flávio','Forró')
 no=No(dado)
-pilha=Pilha(no)
-pilha.push(dado1)
-pilha.push(dado2)
-print(pilha.printall())
+no1=No(dado1)
+no2=No(dado2)
