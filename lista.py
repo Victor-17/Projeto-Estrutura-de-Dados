@@ -4,7 +4,8 @@ class Lista:
     def add(self,no,valor_anterior):
         p=self._head
         q=self._head
-        no=No(no)
+        dado=Dado(no)
+        no=No(dado)
         while(p.get_proximo()!=valor_anterior):
             p=p.get_proximo()
             q=p.get_proximo()
