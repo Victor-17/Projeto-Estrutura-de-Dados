@@ -36,6 +36,4 @@ class Lista:
         while(p.get_proximo()!=None):
             print(p,"\n")
             p=p.get_proximo()
-lista= Lista(10)
-lista.size()
 
