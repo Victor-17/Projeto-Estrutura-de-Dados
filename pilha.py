@@ -23,3 +23,9 @@ class Pilha:
             cont+=1
             topo=topo.get_proximo()
         return cont
+    def printall(self):
+        p = self._head
+        print(p,"\n")
+        while(p.get_proximo()!= None):
+            p = p.get_proximo()
+            print(p,"\n")

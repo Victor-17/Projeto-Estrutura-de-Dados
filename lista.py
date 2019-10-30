@@ -32,6 +32,31 @@ class Lista:
             p-p.get_proximo()
         cont+=1
         return f'O tamanho da fila é de {cont} itens..'
+    def ordenar(self):
+        p = self._head
+        temp = 0
+        cont = 0
+        while(p.get_proximo() != None):
+            cont += 1
+            p = p.get_proximo()
+        cont += 1
+        print('A lista ordenada é:\n')
+        while(temp < cont):
+            while(p.get_proximo() != None):
+                if(p.get_dado()._musica > p.get_proximo().get_dado()._musica):
+                    aux = p.get_dado()._musica
+                    p.get_dado()._musica = p.get_proximo().get_dado()._musica
+                    p.get_proximo().get_dado()._musica = aux
+                    if temp == cont-1:
+                        print(p.get_dado()._musica)
+                else:
+                    if temp == cont-1:
+                        print(p.get_dado()._musica)
+                    p = p.get_proximo()
+        if temp == cont-1:
+            print(p.get_dado()._musica)
+        p = self._head
+        temp +=1
     def print(self):
         p=self._head
         while(p.get_proximo()!=None):
