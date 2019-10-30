@@ -58,8 +58,7 @@ class Pilha:
             return False
     def push(self,item):
         p=self._head
-        dado=Dado(item)
-        q=No(dado)
+        q=No(item)
         q.set_proximo(p)
         q=self._head
     def remove(self):
@@ -122,5 +121,3 @@ fila = Fila(no)
 print(fila.printall())
 dado2 = Dado('Boom','Matuê','Rap')
 no2 = No(dado2)
-lista = Lista(no2)
-print(lista.print())

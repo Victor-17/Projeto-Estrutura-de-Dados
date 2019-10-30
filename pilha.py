@@ -8,8 +8,7 @@ class Pilha:
             return False
     def push(self,item):
         p=self._head
-        dado=Dado(item)
-        q=No(dado)
+        q=No(item)
         q.set_proximo(p)
         q=self._head
     def remove(self):
