@@ -37,7 +37,3 @@ class Pilha:
             cont+=1
             topo=topo.get_proximo()
         return cont
-    pilha=Pilha(20)
-    pilha.push(25)
-    pilha.push(30)
-    pilha.size()
